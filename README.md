@@ -1,6 +1,8 @@
 # Pose Estimation (Work in Progress...)
 
-Performs pose estimation from depth images by training random forests to estimate body parts and estimating 3D joints from the body part predictions.
+Performs pose estimation from depth images through body part classification and joint estimation. 
+
+We train [TensorForests](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/tensor_forest) with depth signals to predict body parts. These predictions are then used to estimate 3D joint positions.
 
 ### Instructions
 1. Put pose batch files (batches of depth images) named as: **Infant-batch-X** (X = 0, 1, 2 ...) inside _data/raw/train/_
