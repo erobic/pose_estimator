@@ -14,12 +14,12 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 conf = config()
-ckpt_file = 'data/model.ckpt' # Save trained model to this file
+ckpt_file = 'data/model.ckpt'  # Save trained model to this file
 
 # Parameters
 num_steps = 300  # Total steps to train
 num_trees = conf['num_trees']
-max_nodes = 1000 # Maximum nodes per tree
+max_nodes = 1000  # Maximum nodes per tree
 
 # Input and Target data
 X = tf.placeholder(tf.float32, shape=[None, conf['num_features']])
@@ -141,6 +141,8 @@ def __random_indices(indices, num):
     return random.sample(indices, num)
 
 
+# TODO: Implement random shuffling to load random images from batch files.
+# Also, do not place a hard limit on the number of batch files.
 def __loaders():
     loaders = []
     for j in range(0, 4):
