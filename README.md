@@ -1,4 +1,4 @@
-# Pose Estimation (Work in Progress...)
+# Pose Estimation
 
 Performs pose estimation from depth images through body part classification and joint estimation. 
 
